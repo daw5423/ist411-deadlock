@@ -16,7 +16,7 @@
 
 package com.tylersuehr;
 
-import com.tylersuehr.data_layer.IRepoCallbacks;
+import com.tylersuehr.framework.data_layer.IRepoCallbacks;
 import com.tylersuehr.framework.domain_layer.UseCase;
 
 /**

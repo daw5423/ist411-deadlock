@@ -14,16 +14,24 @@
  * limitations under the License.
  */
 
-package com.tylersuehr;
+package com.tylersuehr.framework.data_layer;
 
-import com.tylersuehr.framework.data_layer.IRepoCallbacks;
+import java.util.List;
 
 /**
- * Demonstration of mock data source using MVP architecture.
+ * Defines callbacks for repository chain of command design pattern.
  * @author Tyler Suehr
  */
-public interface MockUserRepository {
-    void save(MockUser user);
-    void delete(MockUser user);
-    void findById(String userId, IRepoCallbacks.ISingle<MockUser> callback);
+public interface IRepoCallbacks {
+    interface IError {
+        void onNotAvailable(Exception ex);
+    }
+    
+    interface ISingle<T> extends IError {
+        void onAvailable(T value);
+    }
+    
+    interface IList<T> extends IError {
+        void onAvailable(List<T> values);
+    }
 }

@@ -33,9 +33,6 @@ import com.tylersuehr.framework.ui_layer.AbstractSchedulerPresenter;
  * For more information and details visit: https://github.com/tylersuehr7
  * 
  * @author Tyler Suehr
- * @author Win Ton
- * @author Steven Weber
- * @author David Wong
  */
 public class Main {
     /**
