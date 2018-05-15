@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tylersuehr.framework.ui_layer;
+package edu.psu.ist411.framework.ui_layer;
 
 /**
  * Defines the presenter of the MVP (Model-View-Presenter) architecture.

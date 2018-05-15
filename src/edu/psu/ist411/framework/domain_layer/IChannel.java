@@ -14,46 +14,27 @@
  * limitations under the License.
  */
 
-package com.tylersuehr;
+package edu.psu.ist411.framework.domain_layer;
 
 /**
- * Demonstration of mock model using MVP architecture.
+ * Defines a unique channel that contains both a unique ID for
+ * quick lookup, and a scheduler for scheduling use case executions.
+ * 
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
-public class MockUser {
-    private String id;
-    private String firstName;
-    private String lastName;
+public interface IChannel {
+    /**
+     * Gets the unique channel's ID.
+     * @return channel ID
+     */
+    byte getId();
     
-    
-    public MockUser() {}
-    
-    public String getId() {
-        return id;
-    }
-    
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    
-    
+    /**
+     * Gets the use case scheduler for this channel.
+     * @return {@link IUseCaseScheduler}
+     */
+    IUseCaseScheduler getScheduler();
 }

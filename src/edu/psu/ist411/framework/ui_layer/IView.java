@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.tylersuehr;
-
-import com.tylersuehr.framework.data_layer.IRepoCallbacks;
+package edu.psu.ist411.framework.ui_layer;
 
 /**
- * Demonstration of mock data source using MVP architecture.
+ * Defines the view of the MVP (model-view-presenter) architecture.
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
-public interface MockUserRepository {
-    void save(MockUser user);
-    void delete(MockUser user);
-    void findById(String userId, IRepoCallbacks.ISingle<MockUser> callback);
+public interface IView {
+    /**
+     * Called to display an alert to the user.
+     * @param msg Message to display
+     */
+    void onShowMsg(String msg);
 }

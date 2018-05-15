@@ -14,10 +14,8 @@
  * limitations under the License.
  */
 
-package com.tylersuehr;
+package edu.psu.ist411;
 
-import com.tylersuehr.MockContract.IMockPresenter;
-import com.tylersuehr.MockContract.IMockView;
 import javax.swing.JFrame;
 
 /**
@@ -27,12 +25,12 @@ import javax.swing.JFrame;
  * @author Steven Weber
  * @author David Wong
  */
-public class MockViewImpl extends JFrame implements IMockView {
-    private final IMockPresenter mPresenter;
+public class MockViewImpl extends JFrame implements MockContract.IMockView {
+    private final MockContract.IMockPresenter mPresenter;
     
     
     /* Dependency inject the presenter */
-    public MockViewImpl(final IMockPresenter presenter) {
+    public MockViewImpl(final MockContract.IMockPresenter presenter) {
         super("Mock Frame View");
         mPresenter = presenter;
         mPresenter.attach(this);

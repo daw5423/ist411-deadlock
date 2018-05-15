@@ -14,33 +14,27 @@
  * limitations under the License.
  */
 
-package com.tylersuehr.framework.domain_layer;
+package edu.psu.ist411.framework.data_layer;
 
 import java.util.List;
 
 /**
- * Defines the scheduler that will schedule use case executions.
+ * Defines callbacks for repository chain of command design pattern.
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
-public interface IUseCaseScheduler {
-    /**
-     * Schedules execution of use case, immediately if possible.
-     * 
-     * @param <T> UseCase request
-     * @param <V> UseCase response
-     * 
-     * @param useCase {@link UseCase} to execute
-     * @param request Request of the use case
-     * @param callback {@link UseCase.Callback}
-     */
-    <T,V> void execute(UseCase<T,V> useCase, T request, UseCase.Callback<V> callback);
+public interface IRepoCallbacks {
+    interface IError {
+        void onNotAvailable(Exception ex);
+    }
     
-    /**
-     * Attempts to stop execution of all active and pending use cases.
-     * @return List of {@link Runnable}
-     */
-    List<Runnable> stopExecution();
+    interface ISingle<T> extends IError {
+        void onAvailable(T value);
+    }
+    
+    interface IList<T> extends IError {
+        void onAvailable(List<T> values);
+    }
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tylersuehr.framework.domain_layer;
+package edu.psu.ist411.framework.domain_layer;
 
 /**
  * Single executable task that takes a request and produces a response.

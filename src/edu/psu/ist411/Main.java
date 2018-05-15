@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.tylersuehr;
+package edu.psu.ist411;
 
-import com.tylersuehr.framework.domain_layer.IChannel;
-import com.tylersuehr.framework.domain_layer.ChannelManagerFactory;
-import com.tylersuehr.framework.ui_layer.AbstractSchedulerPresenter;
+import edu.psu.ist411.framework.domain_layer.IChannel;
+import edu.psu.ist411.framework.domain_layer.ChannelManagerFactory;
+import edu.psu.ist411.framework.ui_layer.AbstractSchedulerPresenter;
 
 /**
  * Demonstrates a deadlock.

@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-package com.tylersuehr;
+package edu.psu.ist411;
 
-import com.tylersuehr.MockContract.IMockPresenter;
-import com.tylersuehr.MockContract.IMockView;
-import com.tylersuehr.framework.domain_layer.UseCase;
-import com.tylersuehr.framework.ui_layer.AbstractSchedulerPresenter;
+import edu.psu.ist411.framework.domain_layer.UseCase;
+import edu.psu.ist411.framework.ui_layer.AbstractSchedulerPresenter;
 
 /**
  * Demonstration of mock presenter using MVP architecture.
@@ -29,8 +27,8 @@ import com.tylersuehr.framework.ui_layer.AbstractSchedulerPresenter;
  * @author David Wong
  */
 public class MockPresenterImpl
-        extends AbstractSchedulerPresenter<IMockView>
-        implements IMockPresenter {
+        extends AbstractSchedulerPresenter<MockContract.IMockView>
+        implements MockContract.IMockPresenter {
     private final MockFindUserByIdTask mockFindUserByIdTask;
     
     

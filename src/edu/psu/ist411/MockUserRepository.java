@@ -14,24 +14,19 @@
  * limitations under the License.
  */
 
-package com.tylersuehr;
+package edu.psu.ist411;
 
-import com.tylersuehr.framework.ui_layer.IPresenter;
-import com.tylersuehr.framework.ui_layer.IView;
+import edu.psu.ist411.framework.data_layer.IRepoCallbacks;
 
 /**
- * Demonstration of mock contract for MVP architecture.
+ * Demonstration of mock data source using MVP architecture.
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
-public interface MockContract {
-    interface IMockPresenter extends IPresenter<IMockView> {
-        void loadMockUser(String userId);
-    }
-    
-    interface IMockView extends IView {
-        void onMockUserReady(MockUser user);
-    }
+public interface MockUserRepository {
+    void save(MockUser user);
+    void delete(MockUser user);
+    void findById(String userId, IRepoCallbacks.ISingle<MockUser> callback);
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tylersuehr.framework.domain_layer;
+package edu.psu.ist411.framework.domain_layer;
 
 /**
  * Factory to create stock instances of {@link AbstractChannelManager}.

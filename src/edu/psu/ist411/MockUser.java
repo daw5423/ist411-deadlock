@@ -14,27 +14,46 @@
  * limitations under the License.
  */
 
-package com.tylersuehr.framework.data_layer;
-
-import java.util.List;
+package edu.psu.ist411;
 
 /**
- * Defines callbacks for repository chain of command design pattern.
+ * Demonstration of mock model using MVP architecture.
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
-public interface IRepoCallbacks {
-    interface IError {
-        void onNotAvailable(Exception ex);
+public class MockUser {
+    private String id;
+    private String firstName;
+    private String lastName;
+    
+    
+    public MockUser() {}
+    
+    public String getId() {
+        return id;
     }
     
-    interface ISingle<T> extends IError {
-        void onAvailable(T value);
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
     
-    interface IList<T> extends IError {
-        void onAvailable(List<T> values);
-    }
+    
 }

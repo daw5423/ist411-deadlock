@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.tylersuehr;
+package edu.psu.ist411;
 
-import com.tylersuehr.framework.data_layer.IRepoCallbacks;
-import com.tylersuehr.framework.domain_layer.UseCase;
+import edu.psu.ist411.framework.data_layer.IRepoCallbacks;
+import edu.psu.ist411.framework.domain_layer.UseCase;
 
 /**
  * Demonstration of mock use case using clean architecture.

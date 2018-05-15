@@ -14,19 +14,24 @@
  * limitations under the License.
  */
 
-package com.tylersuehr.framework.ui_layer;
+package edu.psu.ist411;
+
+import edu.psu.ist411.framework.ui_layer.IPresenter;
+import edu.psu.ist411.framework.ui_layer.IView;
 
 /**
- * Defines the view of the MVP (model-view-presenter) architecture.
+ * Demonstration of mock contract for MVP architecture.
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
-public interface IView {
-    /**
-     * Called to display an alert to the user.
-     * @param msg Message to display
-     */
-    void onShowMsg(String msg);
+public interface MockContract {
+    interface IMockPresenter extends IPresenter<IMockView> {
+        void loadMockUser(String userId);
+    }
+    
+    interface IMockView extends IView {
+        void onMockUserReady(MockUser user);
+    }
 }

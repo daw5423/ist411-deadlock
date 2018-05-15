@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.tylersuehr.framework.ui_layer;
+package edu.psu.ist411.framework.ui_layer;
 
-import com.tylersuehr.framework.domain_layer.AbstractChannelManager;
-import com.tylersuehr.framework.domain_layer.ChannelImpl;
-import com.tylersuehr.framework.domain_layer.ChannelManagerFactory;
-import com.tylersuehr.framework.domain_layer.IChannel;
-import com.tylersuehr.framework.domain_layer.IUseCaseScheduler;
-import com.tylersuehr.framework.domain_layer.UseCase;
-import com.tylersuehr.framework.domain_layer.UseCaseSchedulerImpl;
+import edu.psu.ist411.framework.domain_layer.AbstractChannelManager;
+import edu.psu.ist411.framework.domain_layer.ChannelImpl;
+import edu.psu.ist411.framework.domain_layer.ChannelManagerFactory;
+import edu.psu.ist411.framework.domain_layer.IChannel;
+import edu.psu.ist411.framework.domain_layer.IUseCaseScheduler;
+import edu.psu.ist411.framework.domain_layer.UseCase;
+import edu.psu.ist411.framework.domain_layer.UseCaseSchedulerImpl;
 
 /**
  * Implementation of {@link IPresenter} that allows use case scheduling.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tylersuehr.framework.domain_layer;
+package edu.psu.ist411.framework.domain_layer;
 
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;

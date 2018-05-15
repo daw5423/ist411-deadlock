@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.tylersuehr;
+package edu.psu.ist411;
 
-import com.tylersuehr.framework.domain_layer.ChannelImpl;
-import com.tylersuehr.framework.domain_layer.IChannel;
-import com.tylersuehr.framework.domain_layer.IUseCaseScheduler;
-import com.tylersuehr.framework.domain_layer.UseCaseSchedulerImpl;
-import com.tylersuehr.framework.ui_layer.AbstractSchedulerPresenter;
+import edu.psu.ist411.framework.domain_layer.ChannelImpl;
+import edu.psu.ist411.framework.domain_layer.IChannel;
+import edu.psu.ist411.framework.domain_layer.IUseCaseScheduler;
+import edu.psu.ist411.framework.domain_layer.UseCaseSchedulerImpl;
+import edu.psu.ist411.framework.ui_layer.AbstractSchedulerPresenter;
 
 /**
  * Mock Inversion of Control object to afford concrete dependencies.

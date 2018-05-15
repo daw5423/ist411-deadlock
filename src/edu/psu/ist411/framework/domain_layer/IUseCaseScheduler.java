@@ -14,27 +14,33 @@
  * limitations under the License.
  */
 
-package com.tylersuehr.framework.domain_layer;
+package edu.psu.ist411.framework.domain_layer;
+
+import java.util.List;
 
 /**
- * Defines a unique channel that contains both a unique ID for
- * quick lookup, and a scheduler for scheduling use case executions.
- * 
+ * Defines the scheduler that will schedule use case executions.
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
-public interface IChannel {
+public interface IUseCaseScheduler {
     /**
-     * Gets the unique channel's ID.
-     * @return channel ID
+     * Schedules execution of use case, immediately if possible.
+     * 
+     * @param <T> UseCase request
+     * @param <V> UseCase response
+     * 
+     * @param useCase {@link UseCase} to execute
+     * @param request Request of the use case
+     * @param callback {@link UseCase.Callback}
      */
-    byte getId();
+    <T,V> void execute(UseCase<T,V> useCase, T request, UseCase.Callback<V> callback);
     
     /**
-     * Gets the use case scheduler for this channel.
-     * @return {@link IUseCaseScheduler}
+     * Attempts to stop execution of all active and pending use cases.
+     * @return List of {@link Runnable}
      */
-    IUseCaseScheduler getScheduler();
+    List<Runnable> stopExecution();
 }
