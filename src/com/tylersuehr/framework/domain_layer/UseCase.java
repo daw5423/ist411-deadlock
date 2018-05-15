@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Tyler.
+ * Copyright 2018 Group 5.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,9 @@ package com.tylersuehr.framework.domain_layer;
  * (2) Invokes failed callback and provides reason why.
  * 
  * @author Tyler Suehr
+ * @author Win Ton
+ * @author Steven Weber
+ * @author David Wong
  */
 public abstract class UseCase<T,V> {
     /* Stores reference to callback */

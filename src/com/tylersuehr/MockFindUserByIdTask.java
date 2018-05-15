@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Tyler.
+ * Copyright 2018 Group 5.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,6 +27,9 @@ import com.tylersuehr.framework.domain_layer.UseCase;
  * <i>Response: </i> Business model of the user.
  * 
  * @author Tyler Suehr
+ * @author Win Ton
+ * @author Steven Weber
+ * @author David Wong
  */
 public class MockFindUserByIdTask extends UseCase<String,MockUser> {
     private final MockUserRepository mUserRepo;

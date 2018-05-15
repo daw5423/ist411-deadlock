@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Tyler.
+ * Copyright 2018 Group 5.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,9 @@ import com.tylersuehr.framework.data_layer.IRepoCallbacks;
 /**
  * Demonstration of mock data source using MVP architecture.
  * @author Tyler Suehr
+ * @author Win Ton
+ * @author Steven Weber
+ * @author David Wong
  */
 public interface MockUserRepository {
     void save(MockUser user);

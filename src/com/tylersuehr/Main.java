@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Tyler.
+ * Copyright 2018 Group 5.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,6 +33,9 @@ import com.tylersuehr.framework.ui_layer.AbstractSchedulerPresenter;
  * For more information and details visit: https://github.com/tylersuehr7
  * 
  * @author Tyler Suehr
+ * @author Win Ton
+ * @author Steven Weber
+ * @author David Wong
  */
 public class Main {
     /**
