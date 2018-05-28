@@ -20,6 +20,7 @@ import java.util.List;
 
 /**
  * Defines callbacks for repository chain of command design pattern.
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
@@ -29,11 +30,11 @@ public interface IRepoCallbacks {
     interface IError {
         void onNotAvailable(Exception ex);
     }
-    
+
     interface ISingle<T> extends IError {
         void onAvailable(T value);
     }
-    
+
     interface IList<T> extends IError {
         void onAvailable(List<T> values);
     }

@@ -19,7 +19,7 @@ package edu.psu.ist411.framework.domain_layer;
 /**
  * Defines a unique channel that contains both a unique ID for
  * quick lookup, and a scheduler for scheduling use case executions.
- * 
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
@@ -28,10 +28,10 @@ package edu.psu.ist411.framework.domain_layer;
 public interface IChannel {
     /**
      * Gets the unique channel's ID.
-     * @return channel ID
+     * @return channel ID.
      */
     byte getId();
-    
+
     /**
      * Gets the use case scheduler for this channel.
      * @return {@link IUseCaseScheduler}

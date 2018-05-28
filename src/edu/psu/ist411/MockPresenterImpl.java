@@ -21,6 +21,7 @@ import edu.psu.ist411.framework.ui_layer.AbstractSchedulerPresenter;
 
 /**
  * Demonstration of mock presenter using MVP architecture.
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
@@ -30,16 +31,15 @@ public class MockPresenterImpl
         extends AbstractSchedulerPresenter<MockContract.IMockView>
         implements MockContract.IMockPresenter {
     private final MockFindUserByIdTask mockFindUserByIdTask;
-    
-    
-    /* Dependency inject the business logic tasks */
+
+    /** Dependency inject the business logic tasks. */
     public MockPresenterImpl(final MockFindUserByIdTask task1) {
         this.mockFindUserByIdTask = task1;
     }
-    
+
     @Override
     public void loadMockUser(String userId) {
-        // Schedule the execution of the business logic
+        // Schedule the execution of the business logic.
         schedule(mockFindUserByIdTask, userId, new UseCase.Callback<MockUser>() {
             @Override
             public void onSuccess(MockUser foundUser) {
@@ -51,7 +51,7 @@ public class MockPresenterImpl
             public void onFailure(Exception ex) {
                 // Alert the user of the failure in a pretty way
                 getView().onShowMsg(ex.getLocalizedMessage());
-            }            
+            }
         });
-    }    
+    }
 }

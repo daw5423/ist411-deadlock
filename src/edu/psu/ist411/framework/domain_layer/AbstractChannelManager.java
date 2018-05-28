@@ -23,30 +23,28 @@ import java.util.NoSuchElementException;
 
 /**
  * Affords the basic functionality of the channel manager.
- * This code is thread-safe and does NOT deadlock, its implementation
- * is only so I don't need to write the same shit over again.
- * 
+ * This code is thread-safe and does NOT deadlock.
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
 public abstract class AbstractChannelManager {
-    /* Stores references to channels for this manager */
+    /** Stores references to channels for this manager. */
     protected Map<Byte, IChannel> mChannels;
-    
-    
+
     /**
      * Relocates a channel from this manager into another manager.
      * @param m Other {@link AbstractChannelManager}
      * @param channel {@link IChannel}
      */
     public abstract void relocate(AbstractChannelManager m, IChannel channel);
-    
+
     /**
      * Gets a channel using the given channel ID.
-     * @param channelId ID of the channel to find
-     * @return {@link IChannel}
+     * @param channelId ID of the channel to find.
+     * @return {@link IChannel}.
      */
     public final synchronized IChannel get(final byte channelId) {
         if (mChannels != null) {
@@ -54,18 +52,17 @@ public abstract class AbstractChannelManager {
         }
         return null;
     }
-    
+
     /**
      * Gets a channel using the given channel ID, or throws
      * an exception.
-     * 
-     * @param channelId ID of the channel to find
-     * @return {@link IChannel}
-     * 
-     * @throws NoSuchElementException if channel not found
+     *
+     * @param channelId ID of the channel to find.
+     * @return {@link IChannel}.
+     *
+     * @throws NoSuchElementException if channel not found.
      */
-    public final synchronized IChannel getOrThrow(
-            final byte channelId) throws NoSuchElementException {
+    public final synchronized IChannel getOrThrow(final byte channelId) throws NoSuchElementException {
         if (mChannels == null) {
             throw new NoSuchElementException();
         }
@@ -75,10 +72,10 @@ public abstract class AbstractChannelManager {
         }
         return found;
     }
-    
+
     /**
      * Adds a channel to this manager.
-     * @param channel {@link IChannel}
+     * @param channel {@link IChannel}.
      */
     public final synchronized void add(final IChannel channel) {
         if (mChannels == null) {
@@ -86,11 +83,11 @@ public abstract class AbstractChannelManager {
         }
         mChannels.put(channel.getId(), channel);
     }
-    
+
     /**
      * Removes a channel from this manager.
-     * @param channel {@link IChannel}
-     * @return Removed {@link IChannel}
+     * @param channel {@link IChannel}.
+     * @return Removed {@link IChannel}.
      */
     public final synchronized IChannel remove(final IChannel channel) {
         if (mChannels != null) {
@@ -98,11 +95,11 @@ public abstract class AbstractChannelManager {
         }
         return null;
     }
-    
+
     /**
      * Removes a channel from this manager using its channel ID.
-     * @param channelId ID of the channel to remove
-     * @return Removed {@link IChannel}
+     * @param channelId ID of the channel to remove.
+     * @return Removed {@link IChannel}.
      */
     public final synchronized IChannel remove(final byte channelId) {
         if (mChannels != null) {
@@ -110,10 +107,10 @@ public abstract class AbstractChannelManager {
         }
         return null;
     }
-    
+
     /**
      * Convenience method to print each channel out.
-     * @param tag Tag to print (i.e. "M1")
+     * @param tag Tag to print (i.e. "M1").
      */
     public final void print(final String tag) {
         final Collection<IChannel> channels = mChannels.values();

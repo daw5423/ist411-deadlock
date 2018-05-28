@@ -22,39 +22,38 @@ import edu.psu.ist411.framework.domain_layer.UseCase;
 /**
  * Demonstration of mock use case using clean architecture.
  * This example would just find a user using a given user ID.
- * 
+ *
  * <i>Request: </i> Unique ID of the user.
  * <i>Response: </i> Business model of the user.
- * 
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
-public class MockFindUserByIdTask extends UseCase<String,MockUser> {
+public class MockFindUserByIdTask extends UseCase<String, MockUser> {
     private final MockUserRepository mUserRepo;
-    
-    
+
     public MockFindUserByIdTask(final MockUserRepository userRepo) {
         mUserRepo = userRepo;
     }
-    
+
     @Override
     protected void onExecute() {
-        // Get the unique user ID from use case request
+        // Get the unique user ID from use case request.
         final String userId = getRequest();
-        
-        // Lookup the user's ID in the repository
+
+        // Lookup the user's ID in the repository.
         mUserRepo.findById(userId, new IRepoCallbacks.ISingle<MockUser>() {
             @Override
             public void onAvailable(MockUser value) {
-                // Invoke successful callback
+                // Invoke successful callback.
                 pass(value);
             }
 
             @Override
             public void onNotAvailable(Exception ex) {
-                // Invoke failure callback
+                // Invoke failure callback.
                 fail(ex);
             }
         });

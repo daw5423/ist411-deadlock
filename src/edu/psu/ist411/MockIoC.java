@@ -24,9 +24,9 @@ import edu.psu.ist411.framework.ui_layer.AbstractSchedulerPresenter;
 
 /**
  * Mock Inversion of Control object to afford concrete dependencies.
- * This is solely for demonstration and does not provide legit 
+ * This is solely for demonstration and does not provide legit
  * dependencies and therefore would not actually run as expected.
- * 
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
@@ -34,7 +34,7 @@ import edu.psu.ist411.framework.ui_layer.AbstractSchedulerPresenter;
  */
 public final class MockIoC {
     private MockIoC() {}
-    
+
     static AbstractSchedulerPresenter mockPresenter() {
         return new MockPresenterImpl(mockFindUserByIdTask());
     }

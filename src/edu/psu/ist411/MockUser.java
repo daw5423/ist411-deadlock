@@ -18,6 +18,7 @@ package edu.psu.ist411;
 
 /**
  * Demonstration of mock model using MVP architecture.
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
@@ -27,14 +28,13 @@ public class MockUser {
     private String id;
     private String firstName;
     private String lastName;
-    
-    
+
     public MockUser() {}
-    
+
     public String getId() {
         return id;
     }
-    
+
     public void setId(String id) {
         this.id = id;
     }
@@ -54,6 +54,4 @@ public class MockUser {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    
-    
 }

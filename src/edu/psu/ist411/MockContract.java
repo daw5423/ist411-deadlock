@@ -21,6 +21,7 @@ import edu.psu.ist411.framework.ui_layer.IView;
 
 /**
  * Demonstration of mock contract for MVP architecture.
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
@@ -30,7 +31,7 @@ public interface MockContract {
     interface IMockPresenter extends IPresenter<IMockView> {
         void loadMockUser(String userId);
     }
-    
+
     interface IMockView extends IView {
         void onMockUserReady(MockUser user);
     }

@@ -21,12 +21,12 @@ package edu.psu.ist411.framework.ui_layer;
  * Similar to a controller in MVC, but much better:
  * (1) Complete separation of business and application logic.
  * (2) Two-way dependencies on view and presenter
- *      - the view knows of the presenter 
+ *      - the view knows of the presenter
  *      - the presenter knows of the view
  * (3) Easily prevent memory leakage in contextual-based platforms by
  *     attaching/detaching the view to the presenter in appropriate life
  *     cycle events (i.e. like Android Activity and Fragment life cycles).
- * 
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
@@ -35,18 +35,18 @@ package edu.psu.ist411.framework.ui_layer;
 public interface IPresenter<T extends IView> {
     /**
      * Attaches a view to this presenter.
-     * @param view View
+     * @param view View.
      */
     void attach(T view);
-    
+
     /**
      * Detaches the view of this presenter.
      */
     void detach();
-    
+
     /**
      * Gets the view of this presenter.
-     * @return View
+     * @return View.
      */
     T getView();
 }

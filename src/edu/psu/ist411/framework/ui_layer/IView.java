@@ -18,6 +18,7 @@ package edu.psu.ist411.framework.ui_layer;
 
 /**
  * Defines the view of the MVP (model-view-presenter) architecture.
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
@@ -26,7 +27,7 @@ package edu.psu.ist411.framework.ui_layer;
 public interface IView {
     /**
      * Called to display an alert to the user.
-     * @param msg Message to display
+     * @param msg Message to display.
      */
     void onShowMsg(String msg);
 }

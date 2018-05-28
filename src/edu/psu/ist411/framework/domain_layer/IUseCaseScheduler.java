@@ -28,19 +28,19 @@ import java.util.List;
 public interface IUseCaseScheduler {
     /**
      * Schedules execution of use case, immediately if possible.
-     * 
-     * @param <T> UseCase request
-     * @param <V> UseCase response
-     * 
-     * @param useCase {@link UseCase} to execute
-     * @param request Request of the use case
-     * @param callback {@link UseCase.Callback}
+     *
+     * @param <T> UseCase request.
+     * @param <V> UseCase response.
+     *
+     * @param useCase {@link UseCase} to execute.
+     * @param request Request of the use case.
+     * @param callback {@link UseCase.Callback}.
      */
-    <T,V> void execute(UseCase<T,V> useCase, T request, UseCase.Callback<V> callback);
-    
+    <T, V> void execute(UseCase<T, V> useCase, T request, UseCase.Callback<V> callback);
+
     /**
      * Attempts to stop execution of all active and pending use cases.
-     * @return List of {@link Runnable}
+     * @return List of {@link Runnable}.
      */
     List<Runnable> stopExecution();
 }

@@ -20,6 +20,7 @@ import javax.swing.JFrame;
 
 /**
  * Demonstration of mock view using MVP architecture.
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
@@ -27,24 +28,23 @@ import javax.swing.JFrame;
  */
 public class MockViewImpl extends JFrame implements MockContract.IMockView {
     private final MockContract.IMockPresenter mPresenter;
-    
-    
-    /* Dependency inject the presenter */
+
+    /** Dependency inject the presenter. */
     public MockViewImpl(final MockContract.IMockPresenter presenter) {
         super("Mock Frame View");
         mPresenter = presenter;
         mPresenter.attach(this);
-        // TODO call presenter load mock user wherever necessary
-        // TODO remember to detach wherever view only if needed
+        // TODO call presenter load mock user wherever necessary.
+        // TODO remember to detach wherever view only if needed.
     }
-    
+
     @Override
     public void onMockUserReady(MockUser user) {
-        // TODO load user in some container/profile view
+        // TODO load user in some container/profile view.
     }
 
     @Override
     public void onShowMsg(String msg) {
-        // TODO show some dialog or something
+        // TODO show some dialog or something.
     }
 }

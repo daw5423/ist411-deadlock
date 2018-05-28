@@ -18,34 +18,33 @@ package edu.psu.ist411.framework.domain_layer;
 
 /**
  * Basic implementation of {@link IChannel} with immutable properties.
- * 
+ *
  * @author Tyler Suehr
  * @author Win Ton
  * @author Steven Weber
  * @author David Wong
  */
 public class ChannelImpl implements IChannel {
-    /* Stores reference to scheduler */
+    /** Stores reference to scheduler. */
     private final IUseCaseScheduler mScheduler;
-    /* Stores channel id */
+    /** Stores channel ID. */
     private final byte mId;
-    
-    
+
     public ChannelImpl(final byte id, final IUseCaseScheduler scheduler) {
         mId = id;
         mScheduler = scheduler;
     }
-    
+
     @Override
     public final String toString() {
         return "Channel (" + mId + ")";
     }
-    
+
     @Override
     public byte getId() {
         return mId;
     }
-    
+
     @Override
     public IUseCaseScheduler getScheduler() {
         return mScheduler;
